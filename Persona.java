@@ -11,8 +11,7 @@ public class Persona{
     private Double altura;
     private Double peso;
 
-    private static final Persona INSTANCIA = new Persona();
-    private Persona(){}
+
     private Persona(Builder builder){
         id = builder.id;
         nombre = builder.nombre;
@@ -62,20 +61,12 @@ public class Persona{
 
     }
 
-
-    public static Persona getInstance(){
-        return INSTANCIA;
-    }
-    
-
     @Override
     public String toString() {
         return "Persona [id=" + id +", nombre=" + nombre  + ", apellido=" + apellido +", edad=" + edad   +", sexo="
         + sexo + ", altura=" + altura + ", peso=" + peso +  ", direccion="
         + direccion + ", telefono=" + telefono + ", correo=" + correo  +"]";
-    }
-
-    
+    } 
 
 }
 
