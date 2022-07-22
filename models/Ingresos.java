@@ -3,6 +3,15 @@ package models;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * 
+ * Clase encargada del manejo de los ingresos de la aplicacion
+ * 
+ * @author Pedro Jairo Mateo
+ * @since 19/07/2022
+ * @version 1.0.0
+ * 
+ */
 public class Ingresos {
     
     private UUID id;
@@ -19,7 +28,7 @@ public class Ingresos {
         
         double neto = ingresos.monto - Gastos.sumaGastos(lGastos);
         if(neto<=0)
-        return "No hay a que presupuestar mi rey, estas en 0";
+        return "No hay queda dinero para presupuestar.";
 
         return Divisiones.getPresupuesto(lDivisiones, neto);
     }

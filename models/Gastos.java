@@ -4,7 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
+/**
+ * 
+ * Clase encargada del manejo de los gastos de la aplicacion
+ * 
+ * @author Pedro Jairo Mateo
+ * @since 19/07/2022
+ * @version 1.0.0
+ * 
+ */
 public class Gastos{
     
     private UUID id;
@@ -38,7 +46,4 @@ public class Gastos{
     public String toString() {
         return "Gastos [id=" + id + ", monto=" + monto + ", nombre=" + nombre + "]";
     }
-
-
-    
 }

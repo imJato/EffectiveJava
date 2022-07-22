@@ -4,26 +4,35 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * 
+ * Clase encargada del manejo de las divisiones de la aplicacion
+ * 
+ * @author Pedro Jairo Mateo
+ * @since 19/07/2022
+ * @version 1.0.0
+ * 
+ */
 public class Divisiones{
 
     private UUID id;
     private String nombre;
     private double porcentaje;
 
-    public Divisiones(){}
+    private Divisiones(){}
 
-    public Divisiones(UUID id, String nombre, double porcentaje) {
+    private Divisiones(UUID id, String nombre, double porcentaje) {
         this.id = id;
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     };
 
-    public static CharSequence getPresupuesto(List<Divisiones> lDivisiones, double valor){
+    public static CharSequence getPresupuesto(List<Divisiones> lDivisiones, double netoIngreso){
         StringBuilder result = new StringBuilder(100);
         for(int i=0; i<lDivisiones.size(); i++){
             result.append(lDivisiones.get(i).nombre)
                     .append(" = ")
-                    .append((valor * (lDivisiones.get(i).porcentaje/100)))
+                    .append((netoIngreso * (lDivisiones.get(i).porcentaje/100)))
                     .append("\n");
         }
         return result;
